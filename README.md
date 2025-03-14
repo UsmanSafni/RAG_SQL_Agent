@@ -12,7 +12,7 @@ We use PDFs of **Wikipedia pages of US cities** and a **SQL database containing 
 ## **Technologies Used**
 
 - **LlamaIndex** – for orchestrating the agent.
-- **Phoenix-arize** – for observability.
+- **LlamaTrace(Phoenix-Arize)** – for observability.
 - **Streamlit** – to build the UI.
 
 ## **Demo**
