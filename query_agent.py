@@ -14,8 +14,6 @@ from llama_index.core.workflow import (
 )
 from llama_index.core.base.response.schema import Response
 from llama_index.core.tools import FunctionTool
-#from tool import sql_tool
-#from tool import llama_cloud_tool
 from llama_index.llms.openai import OpenAI
 
 

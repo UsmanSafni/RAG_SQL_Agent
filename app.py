@@ -4,7 +4,7 @@ from query_agent import RouterOutputAgentWorkflow
 from tool_setup import QueryEngineTools
 
 class RAGSQLAgentApp:
-    """Streamlit UI for querying SQL databases using an agent workflow."""
+    """Streamlit UI for querying SQL databases using an agent workflow with continuous chat history."""
 
     def __init__(self):
         """Initialize the application and workflow."""
@@ -22,22 +22,61 @@ class RAGSQLAgentApp:
 
     def _setup_ui(self):
         """Setup Streamlit UI components."""
-        st.title("RAG SQL Agent Query UI")
+        with st.sidebar:
+            st.image("./assets/my_image.png", width=300)
+            st.markdown("## How to Use")
+            st.write(
+                "1. Enter your query about the US cities in the chat box given and press Enter.\n"
+                "2. The assistant will process your query and respond.\n"
+                
+            )
+            st.markdown("## Powered By")
+            
+            col1, col2, col3 = st.columns(3)
 
-        query = st.text_input("Enter your SQL-related query:")
+            # Display images in each column
+            with col1:
+                st.image("./assets/image1.png", width=80)
 
-        if st.button("Submit"):
-            if query:
-                with st.spinner("Processing..."):
-                    loop = asyncio.new_event_loop()
-                    asyncio.set_event_loop(loop)
-                    result = loop.run_until_complete(self.run_query(query))
-                st.success("Query executed successfully!")
+            with col2:
+                st.image("./assets/image2.png", width=80)
+
+            with col3:
+                st.image("./assets/image3.png", width=80)
+
+        # Main UI Title
+        st.image("./assets/cover.png", width=800)
+         
+
+        # Initialize session state for chat history
+        if "chat_history" not in st.session_state:
+            st.session_state.chat_history = []
+
+        # Display chat history
+        for chat in st.session_state.chat_history:
+            with st.chat_message("user"):
+                st.write(chat["query"])
+            with st.chat_message("assistant"):
+                st.write(chat["response"])
+
+        # User input box for new queries
+        query = st.chat_input("Enter your query:")
+
+        if query:
+            with st.chat_message("user"):
+                st.write(query)
+
+            with st.spinner("Processing..."):
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                result = loop.run_until_complete(self.run_query(query))
+
+            with st.chat_message("assistant"):
                 st.write(result)
-            else:
-                st.warning("Please enter a query before submitting.")
 
+            # Store chat in session history
+            st.session_state.chat_history.append({"query": query, "response": result})
 
-# Run the Streamlit app
+# Run the app
 if __name__ == "__main__":
     RAGSQLAgentApp()
