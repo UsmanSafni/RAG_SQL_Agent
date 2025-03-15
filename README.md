@@ -17,8 +17,8 @@ We use PDFs of **Wikipedia pages of US cities** and a **SQL database containing 
 
 ## **Demo**
 
-- [**Video Demo**]() *(demo.mp4)*
-- [**Hugging Face Space**]() *(Add link if available)*
+- [**Video Demo**](demo.mp4)
+- [**Hugging Face Space**](https://huggingface.co/spaces/Safni/RAG_SGL_APP)
 
 ---
 
