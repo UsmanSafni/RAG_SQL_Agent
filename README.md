@@ -27,7 +27,7 @@ We use PDFs of Wikipedia pages of US cities and a SQL database containing their 
 
 ### **1. Set up LlamaCloud API**
 
-Get an API key from **LlamaCloud** and add it to the `.env` file:
+Get an API key from [**LlamaCloud**](https://cloud.llamaindex.ai/) and add it to the `.env` file:
 
 ```ini
 LLAMA_CLOUD_API_KEY=<YOUR_API_KEY>
@@ -35,7 +35,7 @@ LLAMA_CLOUD_API_KEY=<YOUR_API_KEY>
 
 ### **2. Set up Observability**
 
-Integrate **LlamaTrace** for observability. Obtain an API key from **LlamaTrace** and add it to the `.env` file:
+Integrate **LlamaTrace** for observability. Obtain an API key from [**LlamaTrace**](https://llamatrace.com/login) and add it to the `.env` file:
 
 ```ini
 PHOENIX_API_KEY=<YOUR_API_KEY>
@@ -43,7 +43,7 @@ PHOENIX_API_KEY=<YOUR_API_KEY>
 
 ### **3. Set up OpenAI API**
 
-Get an API key from **OpenAI** and add it to the `.env` file:
+Get an API key from [**OpenAI**](https://platform.openai.com/) and add it to the `.env` file:
 
 ```ini
 OPENAI_API_KEY=<YOUR_API_KEY>
