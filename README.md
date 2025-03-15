@@ -8,6 +8,13 @@ This project implements a custom agent capable of querying either:
 ### **Use Case**
 
 We use PDFs of Wikipedia pages of US cities and a SQL database containing their populations and states as documents.
+Find them here:
+- [New York City](https://en.wikipedia.org/wiki/New_York_City)
+- [Los Angeles](https://en.wikipedia.org/wiki/Los_Angeles)
+- [Chicago](https://en.wikipedia.org/wiki/Chicago)
+- [Houston](https://en.wikipedia.org/wiki/Houston)
+- [Miami](https://en.wikipedia.org/wiki/Miami)
+- [Seattle](https://en.wikipedia.org/wiki/Seattle)
 
 ## **Technologies Used**
 
