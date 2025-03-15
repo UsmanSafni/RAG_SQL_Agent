@@ -1,13 +1,13 @@
 # **RAG and Text-to-SQL Agent**
 
-This project implements a **custom agent** capable of querying either:
+This project implements a custom agent capable of querying either:
 
 - A **LlamaCloud index** for RAG-based retrieval.
 - A **SQL query engine** as a tool.
 
 ### **Use Case**
 
-We use PDFs of **Wikipedia pages of US cities** and a **SQL database containing their populations and states** as documents.
+We use PDFs of Wikipedia pages of US cities and a SQL database containing their populations and states as documents.
 
 ## **Technologies Used**
 
@@ -21,7 +21,7 @@ We use PDFs of **Wikipedia pages of US cities** and a **SQL database containing 
 - [**Video Demo**](demo.mp4)
 - [**Hugging Face Space**](https://huggingface.co/spaces/Safni/RAG_SGL_APP)
 
----
+
 
 ## **Installation and Setup**
 
