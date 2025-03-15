@@ -14,6 +14,7 @@ We use PDFs of **Wikipedia pages of US cities** and a **SQL database containing 
 - **LlamaIndex** – for orchestrating the agent.
 - **LlamaTrace(Phoenix-Arize)** – for observability.
 - **Streamlit** – to build the UI.
+- **GPT 3.5 turbo** – as the LLM.
 
 ## **Demo**
 
